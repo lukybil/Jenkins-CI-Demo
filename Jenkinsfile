@@ -67,8 +67,8 @@ pipeline {
         }
     }
     
-    always {
+    /*always {
         sh "docekr image rm lukybil/jenkinstest:$COMMIT_HASH_PREV_2"
         cleanWs()
-    }
+    }*/
 }
