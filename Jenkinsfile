@@ -37,15 +37,13 @@ pipeline {
                     image "lukybil/jenkinstest:$COMMIT_HASH"
                 }
             }
-            steps {
-                stages {
-                    stage("INSTALL") {
-                        steps {
-                            script {
-                                sh "apk add --update nodejs npm"
+            stages {
+                stage("INSTALL") {
+                    steps {
+                        script {
+                            sh "apk add --update nodejs npm"
 
-                                sh "npm ci --also=dev"
-                            }
+                            sh "npm ci --also=dev"
                         }
                     }
                 }
